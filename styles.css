@@ -377,6 +377,16 @@ nav {
   border-color: #987437;
 }
 
+.community-hub-grid #welcoming-committee {
+  background: linear-gradient(145deg, #f0f5e9, #e4eddb);
+  border-color: #597548;
+}
+
+.community-hub-grid #block-captains {
+  background: linear-gradient(145deg, #eef5f8, #e1edf1);
+  border-color: #465a64;
+}
+
 .legacy-note {
   margin-top: 44px;
   padding: 22px;
