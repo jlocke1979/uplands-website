@@ -362,6 +362,18 @@ nav {
   max-height: 560px;
 }
 
+.history-wide-image--rotated-map {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.history-wide-image--rotated-map img {
+  width: 86.43%;
+  max-height: none;
+  margin: 0 auto;
+  transform: rotate(-90deg);
+}
+
 .history-wide-image figcaption {
   margin-top: 10px;
   color: var(--muted);
