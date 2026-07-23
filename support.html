@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support · The Uplands</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <nav>
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-label="The Uplands Residential Association">
+          <span class="brand-logo-the">THE</span>
+          <span class="brand-logo-name">UPLANDS</span>
+          <span class="brand-logo-sub">Residential Association</span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="community.html">Community</a>
+        <a href="services.html">Services</a>
+        <a href="documents.html">Documents</a>
+        <a href="association-overview.html">Association</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="support.html" class="active">Support</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1 class="page-title">Support the Uplands</h1>
+    <p class="section-intro">
+      Steady, voluntary support helps the association plan ahead instead of
+      rebuilding the budget one project at a time.
+    </p>
+
+    <div class="donate-callout donate-callout--recurring">
+      <p class="support-priority">The most helpful way to give</p>
+      <h2>Choose Annual Recurring Support</h2>
+      <p>
+        One automatic annual contribution gives the Uplands a more dependable base
+        for snow planning, communications, neighborhood gatherings, beautification,
+        and the ordinary costs of keeping a volunteer association running.
+      </p>
+      <p>
+        Before completing payment, please confirm the amount and billing frequency shown
+        by PayPal. Recurring contributions can be managed or canceled through PayPal.
+      </p>
+      <div id="paypal-button-container-P-4B9811964V1773057NI2VPRY" class="paypal-subscribe"></div>
+      <p class="donate-disclaimer">
+        Payments are handled by PayPal. The Uplands website does not collect or store payment information.
+      </p>
+    </div>
+
+    <section class="support-transparency" aria-labelledby="steady-support-heading">
+      <div>
+        <p class="section-kicker">What steady support makes possible</p>
+        <h2 id="steady-support-heading">Plan first. Fund responsibly. Report back.</h2>
+      </div>
+      <div>
+        <p>
+          The association should publish confirmed service costs, seasonal goals,
+          and plain-language summaries as records are organized. Until then, the
+          site will distinguish verified figures from estimates and open questions.
+        </p>
+        <a href="association-overview.html#funding-future">See funding and transparency →</a>
+      </div>
+    </section>
+
+    <div class="campaign-links">
+      <a class="campaign-link campaign-link--picnic" href="picnic-fund.html">
+        <span>Summer need</span>
+        <strong>Help set the table for the neighborhood picnic.</strong>
+        <em>Explore the Picnic Fund →</em>
+      </a>
+      <a class="campaign-link campaign-link--snow" href="snow-removal-fund.html">
+        <span>Winter need</span>
+        <strong>Help keep the neighborhood moving.</strong>
+        <em>Explore the Snow Fund →</em>
+      </a>
+    </div>
+
+    <div class="donate-callout donate-callout--onetime" id="one-time">
+      <h2>One-Time Contribution</h2>
+      <p>
+        One-time contributions can be used for Annual Membership, Snow Fund, Picnic Fund,
+        Beautification Fund, or general association support. Note which fund you are supporting in the
+        PayPal message field.
+      </p>
+      <div id="paypal-container-9TEZ8K49JL5ZU" class="paypal-onetime"></div>
+      <p class="donate-disclaimer">
+        Payments are handled by PayPal. The Uplands website does not collect or store payment information.
+      </p>
+    </div>
+
+    <section>
+      <h2>Where Your Support Goes</h2>
+      <div class="cards">
+        <div class="card card-static">
+          <h3>Snow Removal</h3>
+          <p>Winter sidewalk clearing so neighbors can move safely through the Uplands.</p>
+        </div>
+        <div class="card card-static">
+          <h3>Beautification &amp; Gardening</h3>
+          <p>Boulevard plantings, native restoration, and seasonal neighborhood care.</p>
+        </div>
+        <div class="card card-static">
+          <h3>Community Communications &amp; Events</h3>
+          <p>The <em>Uplander</em>, meetings, picnics, and activities that keep us connected.</p>
+        </div>
+      </div>
+    </section>
+
+    <p style="margin-top: 32px; color: var(--muted);">
+      Questions about suggested amounts or how the association is funded?
+      See the <a href="association-overview.html">Association Overview</a>.
+    </p>
+  </main>
+
+  <footer>
+    <p>© <span data-current-year>2026</span> Uplands Residential Association · Peoria, Illinois</p>
+  </footer>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=BAANU9PhZrUTSdVj3VXFwkfGb221ck837At5a9cNadC-mwY7oBUx5m0KMZInlOzaZG-cI-aZU6R2hbOB1g&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "9TEZ8K49JL5ZU",
+    }).render("#paypal-container-9TEZ8K49JL5ZU");
+  </script>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA18wXP8nP8olYSseP2y0j027g8TPE5jh_yQ2ehTSJvGTsgL7veqRC39WeW_pYLneJmCTeCI0aUGMzg-0&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+  <script>
+    paypal.Buttons({
+      style: {
+        shape: "pill",
+        color: "gold",
+        layout: "vertical",
+        label: "subscribe",
+      },
+      createSubscription: function (data, actions) {
+        return actions.subscription.create({
+          plan_id: "P-4B9811964V1773057NI2VPRY",
+        });
+      },
+      onApprove: function (data, actions) {
+        /* PayPal handles confirmation in the checkout flow */
+      },
+    }).render("#paypal-button-container-P-4B9811964V1773057NI2VPRY");
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
