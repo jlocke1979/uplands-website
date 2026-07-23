@@ -9,7 +9,7 @@ document.querySelectorAll("nav").forEach((nav) => {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const activeGroups = {
     "about.html": ["about.html", "history.html", "association-overview.html", "gallery.html"],
-    "news-information.html": ["news-information.html", "neighbor-update.html", "garage-sale.html", "new-neighbor.html"],
+    "news-information.html": ["news-information.html", "neighbor-update.html", "garage-sale.html", "new-neighbor.html", "local-resources.html"],
     "community.html": [
       "community.html",
       "services.html",
