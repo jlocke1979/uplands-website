@@ -38,19 +38,39 @@
 
     <div class="donate-callout donate-callout--recurring">
       <p class="support-priority">The most helpful way to give</p>
-      <h2>Choose Annual Recurring Support</h2>
+      <h2>Choose Optional Annual Support</h2>
       <p>
         One automatic annual contribution gives the Uplands a more dependable base
         for snow planning, communications, neighborhood gatherings, beautification,
         and the ordinary costs of keeping a volunteer association running.
       </p>
       <p>
-        Before completing payment, please confirm the amount and billing frequency shown
-        by PayPal. Recurring contributions can be managed or canceled through PayPal.
+        Select the level that fits you. Each option is voluntary, renews annually,
+        and can be managed or canceled through PayPal.
       </p>
-      <div id="paypal-button-container-P-4B9811964V1773057NI2VPRY" class="paypal-subscribe"></div>
+      <div class="recurring-options">
+        <article class="recurring-option">
+          <p class="recurring-option-amount">$30 annually</p>
+          <h3>Neighborhood Support</h3>
+          <p>Supports the URA general fund and the ordinary work of the association.</p>
+          <div id="paypal-button-container-P-75J00510BT827870FNI2VMNI" class="paypal-subscribe"></div>
+        </article>
+        <article class="recurring-option">
+          <p class="recurring-option-amount">$60 annually</p>
+          <h3>Neighborhood + Snow</h3>
+          <p>Supports the general fund and helps sustain neighborhood snow removal.</p>
+          <div id="paypal-button-container-P-79511989BX425691CNI2VOMY" class="paypal-subscribe"></div>
+        </article>
+        <article class="recurring-option">
+          <p class="recurring-option-amount">$90 annually</p>
+          <h3>Neighborhood + Snow + Beautification</h3>
+          <p>Supports all three funds, including boulevard and neighborhood care.</p>
+          <div id="paypal-button-container-P-4B9811964V1773057NI2VPRY" class="paypal-subscribe"></div>
+        </article>
+      </div>
       <p class="donate-disclaimer">
-        Payments are handled by PayPal. The Uplands website does not collect or store payment information.
+        These are optional annual recurring contributions. Payments are handled by
+        PayPal; the Uplands website does not collect or store payment information.
       </p>
     </div>
 
@@ -131,22 +151,28 @@
   </script>
   <script src="https://www.paypal.com/sdk/js?client-id=BAA18wXP8nP8olYSseP2y0j027g8TPE5jh_yQ2ehTSJvGTsgL7veqRC39WeW_pYLneJmCTeCI0aUGMzg-0&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
   <script>
-    paypal.Buttons({
-      style: {
-        shape: "pill",
-        color: "gold",
-        layout: "vertical",
-        label: "subscribe",
-      },
-      createSubscription: function (data, actions) {
-        return actions.subscription.create({
-          plan_id: "P-4B9811964V1773057NI2VPRY",
-        });
-      },
-      onApprove: function (data, actions) {
-        /* PayPal handles confirmation in the checkout flow */
-      },
-    }).render("#paypal-button-container-P-4B9811964V1773057NI2VPRY");
+    [
+      "P-75J00510BT827870FNI2VMNI",
+      "P-79511989BX425691CNI2VOMY",
+      "P-4B9811964V1773057NI2VPRY",
+    ].forEach(function (planId) {
+      paypal.Buttons({
+        style: {
+          shape: "pill",
+          color: "gold",
+          layout: "vertical",
+          label: "subscribe",
+        },
+        createSubscription: function (data, actions) {
+          return actions.subscription.create({
+            plan_id: planId,
+          });
+        },
+        onApprove: function (data, actions) {
+          /* PayPal handles confirmation in the checkout flow */
+        },
+      }).render("#paypal-button-container-" + planId);
+    });
   </script>
   <script src="script.js"></script>
 </body>

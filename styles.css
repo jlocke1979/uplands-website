@@ -1458,6 +1458,43 @@ h1 {
   align-items: center;
 }
 
+.recurring-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.recurring-option {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  border: 1px solid rgba(39, 82, 58, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.recurring-option h3 {
+  margin: 4px 0 10px;
+}
+
+.recurring-option p {
+  margin-top: 0;
+}
+
+.recurring-option .paypal-subscribe {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.recurring-option-amount {
+  color: var(--green);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
 .paypal-onetime {
   width: 100%;
   max-width: 560px;
@@ -2797,6 +2834,17 @@ footer {
 }
 
 @media (max-width: 960px) {
+  .recurring-options {
+    grid-template-columns: 1fr;
+  }
+
+  .recurring-option {
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
   .season-grid {
     grid-template-columns: 1fr 1fr;
   }
