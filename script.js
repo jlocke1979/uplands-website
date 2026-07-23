@@ -12,6 +12,7 @@ document.querySelectorAll("nav").forEach((nav) => {
     "news-information.html": ["news-information.html", "neighbor-update.html", "garage-sale.html", "new-neighbor.html", "local-resources.html"],
     "community.html": [
       "community.html",
+      "block-parties.html",
       "services.html",
       "garage-sale.html",
       "garden-campaign.html",
