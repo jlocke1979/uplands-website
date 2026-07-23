@@ -10,8 +10,15 @@ document.querySelectorAll("nav").forEach((nav) => {
   const activeGroups = {
     "about.html": ["about.html", "history.html", "association-overview.html", "gallery.html"],
     "news-information.html": ["news-information.html", "neighbor-update.html", "garage-sale.html", "new-neighbor.html"],
-    "community.html": ["community.html", "garden-campaign.html", "halloween.html", "picnic-fund.html"],
-    "services.html": ["services.html", "snow-removal-fund.html"],
+    "community.html": [
+      "community.html",
+      "services.html",
+      "garage-sale.html",
+      "garden-campaign.html",
+      "halloween.html",
+      "picnic-fund.html",
+      "snow-removal-fund.html",
+    ],
     "documents.html": ["documents.html"],
     "support.html": ["support.html"],
   };
@@ -19,7 +26,6 @@ document.querySelectorAll("nav").forEach((nav) => {
     ["about.html", "About"],
     ["news-information.html", "News & Information"],
     ["community.html", "Community"],
-    ["services.html", "Services"],
     ["documents.html", "Documents"],
     ["support.html", "Support"],
   ];
