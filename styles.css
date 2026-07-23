@@ -173,6 +173,7 @@ nav {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 18px;
+  margin-top: 34px;
   margin-bottom: 26px;
 }
 
