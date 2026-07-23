@@ -254,18 +254,42 @@ nav {
 }
 
 .info-link-cards a {
+  position: relative;
   padding: 18px;
+  padding-right: 48px;
   display: flex;
   justify-content: space-between;
   gap: 18px;
   border-radius: 12px;
   color: var(--green);
-  background: var(--light-green);
+  background: #dfeae2;
+  border: 1px solid rgba(35, 66, 54, .24);
+  box-shadow: 0 4px 12px rgba(35, 66, 54, .06);
   text-decoration: none;
+  transition: transform .18s ease, background-color .18s ease,
+    border-color .18s ease, box-shadow .18s ease;
+}
+
+.info-link-cards a::after {
+  content: "→";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.info-link-cards a:hover,
+.info-link-cards a:focus-visible {
+  transform: translateY(-2px);
+  background: #d4e3d8;
+  border-color: rgba(35, 66, 54, .42);
+  box-shadow: 0 9px 20px rgba(35, 66, 54, .12);
 }
 
 .info-link-cards span {
-  color: var(--muted);
+  color: #46564f;
 }
 
 .resident-info {
@@ -283,7 +307,8 @@ nav {
   padding: 26px;
   border-radius: 16px;
   background: white;
-  border: 1px solid rgba(35,66,54,.1);
+  border: 1px solid rgba(35,66,54,.24);
+  box-shadow: 0 6px 18px rgba(35, 66, 54, .07);
 }
 
 .resident-info-grid h3 {
@@ -293,6 +318,28 @@ nav {
 .resident-info-grid p {
   color: var(--muted);
   line-height: 1.6;
+}
+
+.resident-info-grid article > a {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 9px 13px;
+  color: white;
+  background: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 9px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: transform .18s ease, background-color .18s ease,
+    box-shadow .18s ease;
+}
+
+.resident-info-grid article > a:hover,
+.resident-info-grid article > a:focus-visible {
+  transform: translateY(-1px);
+  background: var(--green-dark);
+  box-shadow: 0 7px 16px rgba(21, 47, 39, .2);
 }
 
 .legacy-note {
