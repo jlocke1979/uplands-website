@@ -344,7 +344,14 @@ nav {
 }
 
 .community-hub-grid article {
+  display: flex;
+  flex-direction: column;
   border-top-width: 5px;
+}
+
+.community-hub-grid article > a {
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .community-hub-grid #picnic {
