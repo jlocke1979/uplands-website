@@ -351,7 +351,9 @@ nav {
 
 .community-hub-grid article > a {
   align-self: stretch;
+  width: 100%;
   margin-top: auto;
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -428,7 +430,9 @@ nav {
 
 .resident-info--news .resident-info-grid article > a {
   align-self: stretch;
+  width: 100%;
   margin-top: auto;
+  box-sizing: border-box;
   text-align: center;
 }
 
