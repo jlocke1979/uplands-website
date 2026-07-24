@@ -1613,7 +1613,7 @@ h1 {
 
 .recurring-options {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   margin-top: 24px;
 }
@@ -1648,24 +1648,30 @@ h1 {
   letter-spacing: 0.02em;
 }
 
-.paypal-onetime {
-  width: 100%;
-  max-width: 560px;
-  margin: 0 auto;
-  padding-left: 1in;
-  box-sizing: border-box;
-  text-align: center;
+.recurring-option--onetime {
+  background: #fff8e8;
+  border-color: rgba(164, 82, 56, .32);
 }
 
-.paypal-onetime > * {
-  width: 100%;
-  max-width: 100%;
-}
-
-.paypal-onetime iframe {
-  margin-left: 0;
-  margin-right: auto;
+.paypal-link-button {
   display: block;
+  width: 100%;
+  margin-top: auto;
+  padding: 13px 16px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  color: #173f35;
+  background: #ffc439;
+  box-shadow: 0 4px 12px rgba(21,47,39,.14);
+  font: 700 1rem/1.2 Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+
+.paypal-link-button:hover,
+.paypal-link-button:focus-visible {
+  background: #f2ba36;
+  transform: translateY(-1px);
 }
 
 /* Seasonal campaigns */
@@ -2947,6 +2953,62 @@ h1 {
   margin-top: 24px;
 }
 
+.gallery-intro {
+  margin-bottom: 36px;
+  padding: clamp(34px, 7vw, 64px);
+  border-radius: 22px;
+  color: white;
+  background:
+    linear-gradient(120deg, rgba(21, 47, 39, .96), rgba(47, 102, 141, .82)),
+    url("assets/images/gallery/porch-light.jpg") center 44% / cover;
+  box-shadow: 0 18px 42px rgba(21, 47, 39, .18);
+}
+
+.gallery-intro .section-kicker,
+.gallery-intro .page-title,
+.gallery-intro p {
+  color: white;
+}
+
+.gallery-intro .page-title {
+  margin: 8px 0 14px;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: .95;
+}
+
+.gallery-intro > p:last-of-type {
+  max-width: 650px;
+  margin: 0;
+  color: rgba(255,255,255,.88);
+  font-size: 1.12rem;
+  line-height: 1.6;
+}
+
+.gallery-intro-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.gallery-intro-actions .button.secondary {
+  border-color: rgba(255,255,255,.72);
+}
+
+.gallery-home-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.gallery-home-secondary {
+  color: var(--green);
+  border: 1px solid rgba(35,66,54,.28);
+  background: white;
+}
+
 .gallery-item {
   display: block;
   border-radius: 12px;
@@ -2988,7 +3050,7 @@ footer {
 
 @media (max-width: 960px) {
   .recurring-options {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .recurring-option {
@@ -3049,6 +3111,10 @@ footer {
 }
 
 @media (max-width: 760px) {
+  .recurring-options {
+    grid-template-columns: 1fr;
+  }
+
   nav {
     align-items: center;
   }
@@ -3285,10 +3351,6 @@ footer {
 
   .garage-gallery-grid {
     grid-template-columns: 1fr;
-  }
-
-  .paypal-onetime {
-    padding-left: 0;
   }
 
   .quick-links {
