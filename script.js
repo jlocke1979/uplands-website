@@ -8,7 +8,7 @@ document.querySelectorAll("nav").forEach((nav) => {
 
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   const activeGroups = {
-    "about.html": ["about.html", "history.html", "association-overview.html", "gallery.html"],
+    "about.html": ["about.html", "history.html", "association-overview.html"],
     "news-information.html": ["news-information.html", "neighbor-update.html", "garage-sale.html", "new-neighbor.html", "local-resources.html"],
     "community.html": [
       "community.html",
@@ -21,6 +21,7 @@ document.querySelectorAll("nav").forEach((nav) => {
       "snow-removal-fund.html",
     ],
     "documents.html": ["documents.html"],
+    "gallery.html": ["gallery.html", "a-view-from-the-uplands.html"],
     "support.html": ["support.html"],
   };
   const primaryLinks = [
@@ -28,6 +29,7 @@ document.querySelectorAll("nav").forEach((nav) => {
     ["news-information.html", "News & Information"],
     ["community.html", "Community"],
     ["documents.html", "Documents"],
+    ["gallery.html", "Gallery"],
     ["support.html", "Support"],
   ];
   links.replaceChildren(...primaryLinks.map(([href, label]) => {
