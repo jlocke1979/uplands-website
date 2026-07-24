@@ -427,8 +427,9 @@ nav {
 }
 
 .resident-info--news .resident-info-grid article > a {
-  align-self: flex-start;
+  align-self: stretch;
   margin-top: auto;
+  text-align: center;
 }
 
 .legacy-note {
