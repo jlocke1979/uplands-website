@@ -350,8 +350,9 @@ nav {
 }
 
 .community-hub-grid article > a {
-  align-self: flex-start;
+  align-self: stretch;
   margin-top: auto;
+  text-align: center;
 }
 
 .community-hub-grid #picnic {
