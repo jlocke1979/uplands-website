@@ -413,6 +413,16 @@ nav {
   border-color: #8a6a34;
 }
 
+.resident-info--news .resident-info-grid article {
+  display: flex;
+  flex-direction: column;
+}
+
+.resident-info--news .resident-info-grid article > a {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
 .legacy-note {
   margin-top: 44px;
   padding: 22px;
