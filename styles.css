@@ -566,8 +566,14 @@ nav {
 }
 
 .history-credits {
-  padding: 36px 0 0;
+  margin-top: 24px;
+  padding: 24px 28px;
+  border: 1px solid rgba(35,66,54,.12);
+  border-radius: 18px;
+  background: var(--card);
+  color: var(--ink);
   font-size: .9rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
 .garden-legacy {
