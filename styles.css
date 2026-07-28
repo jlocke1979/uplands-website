@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lobster&family=Oswald:wght@500;600;700&display=swap");
 
 :root {
   --green: #234236;
@@ -2086,10 +2086,114 @@ h1 {
   margin-top: 28px;
 }
 
+.campaign-body--picnic {
+  background: #f7f0e3;
+}
+
 .picnic-hero {
-  max-width: none;
-  padding-inline: max(34px, calc((100vw - 1112px) / 2));
-  background: #fff8e8;
+  position: relative;
+  min-height: 720px;
+  padding: 118px 28px 72px;
+  overflow: hidden;
+  color: #12325b;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255,255,255,.76), transparent 48%),
+    #f7f0e3;
+  text-align: center;
+}
+
+.picnic-hero-inner {
+  position: relative;
+  z-index: 4;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.picnic-annual {
+  margin: 0;
+  color: #12325b;
+  font: 700 clamp(3rem, 7vw, 6.2rem)/.9 "Oswald", Arial, sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.picnic-hero h1 {
+  margin: -4px 0 0;
+  line-height: .82;
+}
+
+.picnic-hero h1 span,
+.picnic-hero h1 strong {
+  display: block;
+}
+
+.picnic-hero h1 span {
+  position: relative;
+  z-index: 2;
+  color: #285d24;
+  font: 400 clamp(3rem, 10vw, 9rem)/.95 "Lobster", Georgia, serif;
+  letter-spacing: -.035em;
+}
+
+.picnic-hero h1 strong {
+  color: #d42020;
+  font: 700 clamp(6.5rem, 16vw, 13rem)/.8 "Oswald", Arial, sans-serif;
+  letter-spacing: -.055em;
+  text-transform: none;
+}
+
+.picnic-recruiting {
+  position: relative;
+  z-index: 3;
+  max-width: 1040px;
+  margin: 24px auto 0;
+  padding: 16px clamp(30px, 7vw, 72px);
+  color: white;
+  background: #12325b;
+  box-shadow: 0 8px 0 rgba(18,50,91,.12);
+  clip-path: polygon(3% 0, 97% 0, 100% 50%, 97% 100%, 3% 100%, 0 50%);
+  font: 600 clamp(1.25rem, 3.2vw, 2.6rem)/1.08 "Oswald", Arial, sans-serif;
+  letter-spacing: .015em;
+}
+
+.picnic-hero-date {
+  margin: 20px 0 0;
+  color: #285d24;
+  font: 600 clamp(1.8rem, 4vw, 3.6rem)/1.1 "Oswald", Arial, sans-serif;
+}
+
+.picnic-hero-lede {
+  margin: 18px auto 0;
+  color: #43544e;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.picnic-hero-actions {
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.picnic-button-secondary {
+  color: #12325b;
+  border: 2px solid #12325b;
+  background: transparent;
+}
+
+.picnic-corner-notes {
+  position: absolute;
+  inset: 165px max(22px, calc((100vw - 1220px) / 2)) auto;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  color: #285d24;
+  font: 400 1.2rem/1.3 "Lobster", Georgia, serif;
+  text-align: left;
+}
+
+.picnic-corner-notes span:last-child {
+  color: #12325b;
+  text-align: right;
 }
 
 .campaign--picnic .campaign-kicker {
@@ -2116,19 +2220,19 @@ h1 {
 
 .picnic-pennants {
   position: absolute;
-  inset: 0 0 auto;
+  inset: 0 -2% auto;
   z-index: 3;
-  height: 76px;
+  height: 96px;
   display: flex;
   justify-content: space-around;
-  border-top: 5px solid #12325b;
-  transform: rotate(2deg);
+  border-top: 4px solid #12325b;
+  transform: rotate(-1deg);
 }
 
 .picnic-pennants i {
   display: block;
-  width: 44px;
-  height: 62px;
+  width: clamp(38px, 6vw, 78px);
+  height: clamp(58px, 8vw, 94px);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   background: #b9282b;
 }
@@ -2262,8 +2366,8 @@ h1 {
   border: 1px solid rgba(18,50,91,.18);
   border-top: 6px solid #245a30;
   border-radius: 18px;
-  background: #fffdf7;
-  box-shadow: 0 12px 34px rgba(35,66,54,.07);
+  background: #fffaf0;
+  box-shadow: 0 10px 0 rgba(18,50,91,.05);
 }
 
 .picnic-champion-grid article:nth-child(2) {
@@ -2288,13 +2392,16 @@ h1 {
   min-height: 2.5em;
   margin: 16px 0 10px;
   color: #12325b;
-  font-size: 1.3rem;
+  font: 600 1.35rem/1.15 "Oswald", Arial, sans-serif;
   line-height: 1.15;
 }
 
 .campaign--picnic .campaign-details h2,
 .campaign--picnic .picnic-connect h2 {
   color: #12325b;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -.02em;
 }
 
 .picnic-champion-grid p {
@@ -2323,7 +2430,7 @@ h1 {
   padding: 24px;
   border-radius: 16px;
   color: #12325b;
-  background: #f5d77b;
+  background: #f6c24d;
 }
 
 .picnic-help-strip > div:first-child {
@@ -2383,7 +2490,7 @@ h1 {
   align-items: center;
   border: 2px solid #12325b;
   border-radius: 20px;
-  background: #fff8e8;
+  background: #fffaf0;
 }
 
 .picnic-share img {
@@ -2397,7 +2504,7 @@ h1 {
 .picnic-share h3 {
   margin: 8px 0;
   color: #12325b;
-  font-size: 1.35rem;
+  font: 600 1.35rem/1.2 "Oswald", Arial, sans-serif;
 }
 
 .picnic-share p:last-child {
@@ -2410,8 +2517,11 @@ h1 {
 
 .campaign-closing--picnic {
   position: relative;
-  min-height: 0;
+  min-height: 470px;
   padding: 96px max(34px, calc((100vw - 1060px) / 2));
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: center;
   overflow: hidden;
   color: white;
   background: #12325b;
@@ -2420,9 +2530,18 @@ h1 {
 .picnic-closing-copy {
   position: relative;
   z-index: 2;
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
+  grid-column: 2;
+  max-width: 680px;
+  text-align: left;
+}
+
+.picnic-closing-art {
+  position: absolute;
+  left: max(-20px, calc((100vw - 1220px) / 2));
+  bottom: -12px;
+  width: min(47vw, 610px);
+  height: auto;
+  pointer-events: none;
 }
 
 .campaign-closing--picnic .campaign-kicker {
@@ -2431,10 +2550,12 @@ h1 {
 
 .campaign-closing--picnic h2 {
   color: white;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 600;
 }
 
 .picnic-closing-actions {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .picnic-closing-actions > a:not(.button) {
@@ -3338,6 +3459,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .picnic-corner-notes {
+    display: none;
+  }
+
   .picnic-champion-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -3576,8 +3701,8 @@ footer {
   }
 
   .campaign-closing--picnic {
-    min-height: 0;
-    padding: 72px 22px;
+    min-height: 720px;
+    padding: 72px 22px 380px;
     display: block;
   }
 
@@ -3589,8 +3714,12 @@ footer {
     justify-content: center;
   }
 
-  .picnic-poster-art {
-    width: 145%;
+  .picnic-closing-art {
+    left: 50%;
+    bottom: -8px;
+    width: min(680px, 145vw);
+    max-width: none;
+    transform: translateX(-50%);
   }
 
   .season-grid,
