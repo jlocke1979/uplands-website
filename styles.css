@@ -2109,9 +2109,9 @@ h1 {
   min-height: 500px;
   overflow: hidden;
   border-radius: 36px;
-  border: 3px solid #12325b;
-  background: #f4c454;
-  box-shadow: 0 26px 60px rgba(146,85,36,.18);
+  border: 0;
+  background: #efe5d4;
+  box-shadow: none;
 }
 
 .picnic-pennants {
