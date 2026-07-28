@@ -2206,7 +2206,7 @@ h1 {
   flex-wrap: wrap;
   padding: 28px;
   color: white;
-  background: var(--green);
+  background: #12325b;
   font-size: 1.05rem;
 }
 
@@ -2216,7 +2216,7 @@ h1 {
 
 .picnic-date {
   margin: 24px 0 0;
-  color: var(--green);
+  color: #12325b;
   font-size: 1.35rem;
   font-weight: 700;
 }
@@ -2278,6 +2278,11 @@ h1 {
   color: #12325b;
   font-size: 1.3rem;
   line-height: 1.15;
+}
+
+.campaign--picnic .campaign-details h2,
+.campaign--picnic .picnic-connect h2 {
+  color: #12325b;
 }
 
 .picnic-champion-grid p {
@@ -2344,7 +2349,7 @@ h1 {
 
 .picnic-connect h2 {
   margin: 10px 0 18px;
-  color: var(--green);
+  color: #12325b;
   font-size: clamp(2.2rem, 4.5vw, 3.7rem);
   line-height: 1;
 }
@@ -2392,15 +2397,47 @@ h1 {
 }
 
 .campaign-closing--picnic {
-  background: #fff1cc;
+  position: relative;
+  min-height: 470px;
+  padding: 96px max(34px, calc((100vw - 1060px) / 2));
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background: #12325b;
+}
+
+.picnic-closing-art {
+  position: absolute;
+  left: max(-20px, calc((100vw - 1220px) / 2));
+  bottom: -12px;
+  width: min(47vw, 610px);
+  height: auto;
+  pointer-events: none;
+}
+
+.picnic-closing-copy {
+  position: relative;
+  z-index: 2;
+  grid-column: 2;
+  text-align: left;
+}
+
+.campaign-closing--picnic .campaign-kicker {
+  color: #f5d77b;
+}
+
+.campaign-closing--picnic h2 {
+  color: white;
 }
 
 .picnic-closing-actions {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .picnic-closing-actions > a:not(.button) {
-  color: #12325b;
+  color: white;
 }
 
 .campaign-links {
@@ -3312,6 +3349,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .campaign-closing--picnic {
+    grid-template-columns: .75fr 1.25fr;
+  }
+
   .snow-campaign-art,
   .picnic-poster {
     min-height: 480px;
@@ -3535,6 +3576,28 @@ footer {
   .picnic-share img {
     width: 160px;
     height: 160px;
+  }
+
+  .campaign-closing--picnic {
+    min-height: 700px;
+    padding: 72px 22px 360px;
+    display: block;
+  }
+
+  .picnic-closing-copy {
+    text-align: center;
+  }
+
+  .picnic-closing-actions {
+    justify-content: center;
+  }
+
+  .picnic-closing-art {
+    left: 50%;
+    bottom: -8px;
+    width: min(680px, 140vw);
+    max-width: none;
+    transform: translateX(-50%);
   }
 
   .season-grid,
