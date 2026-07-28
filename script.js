@@ -2,6 +2,24 @@ document.querySelectorAll("[data-current-year]").forEach((year) => {
   year.textContent = new Date().getFullYear();
 });
 
+document.querySelectorAll("[data-copy-link]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const link = button.dataset.copyLink;
+    const status = button.closest("section")?.querySelector("[data-copy-status]");
+    try {
+      await navigator.clipboard.writeText(link);
+      if (status) status.textContent = "Page link copied.";
+      button.textContent = "Copied!";
+      window.setTimeout(() => {
+        button.textContent = "Copy page link";
+        if (status) status.textContent = "";
+      }, 2400);
+    } catch {
+      if (status) status.textContent = `Copy this link: ${link}`;
+    }
+  });
+});
+
 document.querySelectorAll("nav").forEach((nav) => {
   const links = nav.querySelector(".nav-links");
   if (!links) return;

@@ -2534,6 +2534,26 @@ h1 {
   margin-top: 14px;
 }
 
+.picnic-share-section {
+  border-top: 0;
+  border-bottom: 1px solid rgba(18,50,91,.14);
+}
+
+.picnic-share-actions {
+  margin-top: 8px;
+}
+
+.picnic-share-actions .button {
+  margin-top: 0;
+}
+
+.picnic-share-status {
+  min-height: 1.5em;
+  margin: 12px 0 0;
+  color: #285d24;
+  font-weight: 700;
+}
+
 .picnic-share {
   padding: 24px;
   display: grid;
