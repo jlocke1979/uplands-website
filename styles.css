@@ -2370,6 +2370,14 @@ h1 {
   box-shadow: 0 10px 0 rgba(18,50,91,.05);
 }
 
+.picnic-role-icon {
+  display: block;
+  width: 108px;
+  height: 108px;
+  margin: -4px auto 8px;
+  object-fit: contain;
+}
+
 .picnic-champion-grid article:nth-child(2) {
   border-top-color: #e46c20;
 }
@@ -2382,15 +2390,9 @@ h1 {
   border-top-color: #c91d24;
 }
 
-.picnic-role-number {
-  color: #b84c32;
-  font: 700 .72rem/1 Arial, Helvetica, sans-serif;
-  letter-spacing: .1em;
-}
-
 .picnic-champion-grid h3 {
   min-height: 2.5em;
-  margin: 16px 0 10px;
+  margin: 8px 0 10px;
   color: #12325b;
   font: 600 1.35rem/1.15 "Oswald", Arial, sans-serif;
   line-height: 1.15;
@@ -2429,13 +2431,30 @@ h1 {
 .picnic-help-strip > div {
   padding: 24px;
   border-radius: 16px;
-  color: #12325b;
-  background: #f6c24d;
+  color: white;
+  background: #285d24;
 }
 
 .picnic-help-strip > div:first-child {
   color: white;
   background: #12325b;
+}
+
+.picnic-help-strip > div:nth-child(3) {
+  background: #d42020;
+}
+
+.picnic-help-strip > div:nth-child(4) {
+  color: #12325b;
+  background: #f6c24d;
+}
+
+.picnic-help-icon {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin: -8px auto 10px;
+  object-fit: contain;
 }
 
 .picnic-help-strip span,
@@ -2453,6 +2472,39 @@ h1 {
 
 .picnic-help-strip strong {
   font-size: 1.05rem;
+}
+
+.picnic-difference-banner {
+  max-width: 1080px;
+  margin: -44px auto 72px;
+  padding: 12px 58px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  align-items: center;
+  color: white;
+  background: #285d24;
+  clip-path: polygon(2% 0, 98% 0, 96% 50%, 98% 100%, 2% 100%, 4% 50%);
+  font: 400 clamp(1.25rem, 3vw, 2.15rem)/1.15 "Lobster", Georgia, serif;
+  text-align: center;
+  text-shadow: 0 2px 0 rgba(0,0,0,.22);
+}
+
+.picnic-difference-star {
+  flex: 0 0 auto;
+  color: #f6c24d;
+  font: 700 1.5em/1 Arial, sans-serif;
+  text-shadow: 0 2px 0 #12325b;
+}
+
+.picnic-difference-copy {
+  color: white;
+  font: inherit;
+}
+
+.picnic-difference-banner strong {
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 600;
 }
 
 .picnic-connect {
@@ -3698,6 +3750,18 @@ footer {
   .picnic-share img {
     width: 160px;
     height: 160px;
+  }
+
+  .picnic-difference-banner {
+    margin: -44px 18px 62px;
+    padding: 14px 30px;
+    gap: 8px;
+    clip-path: polygon(3% 0, 97% 0, 94% 50%, 97% 100%, 3% 100%, 6% 50%);
+    font-size: 1.15rem;
+  }
+
+  .picnic-difference-star {
+    font-size: 1.15rem;
   }
 
   .campaign-closing--picnic {
