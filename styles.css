@@ -3551,6 +3551,130 @@ h1 {
   border-color: rgba(255,255,255,.72);
 }
 
+.gallery-intro .gallery-photographer-credit {
+  margin-top: 22px;
+  color: rgba(255,255,255,.78);
+  font-size: .88rem;
+  font-style: italic;
+}
+
+.picture-month-page {
+  max-width: 1080px;
+}
+
+.picture-month-intro {
+  max-width: 760px;
+}
+
+.picture-month-feature {
+  margin: 42px 0 0;
+}
+
+.picture-month-feature > a {
+  display: block;
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--green);
+  box-shadow: 0 24px 64px rgba(21, 47, 39, .18);
+}
+
+.picture-month-feature img {
+  display: block;
+  width: 100%;
+  max-height: 760px;
+  object-fit: cover;
+  object-position: center 54%;
+}
+
+.picture-month-feature figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 4px 0;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.picture-credit {
+  font-style: italic;
+  text-align: right;
+}
+
+.picture-month-share {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: center;
+  gap: 54px;
+  margin-top: 64px;
+  padding: 42px;
+  border-radius: 24px;
+  background: var(--light-green);
+}
+
+.picture-month-share h2 {
+  margin: 6px 0 14px;
+  color: var(--green);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.05;
+}
+
+.picture-month-share p:not(.section-kicker) {
+  max-width: 600px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.picture-month-qr {
+  display: block;
+  padding: 16px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 12px 30px rgba(21, 47, 39, .12);
+}
+
+.picture-month-qr img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.picture-month-back {
+  margin: 36px 0 0;
+  text-align: center;
+}
+
+.picture-month-back a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 720px) {
+  .picture-month-feature > a {
+    border-radius: 18px;
+  }
+
+  .picture-month-feature figcaption {
+    display: grid;
+    gap: 6px;
+  }
+
+  .picture-credit {
+    text-align: left;
+  }
+
+  .picture-month-share {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 28px 22px;
+  }
+
+  .picture-month-qr {
+    width: min(280px, 100%);
+    justify-self: center;
+  }
+}
+
 .gallery-home-actions {
   display: flex;
   justify-content: center;

@@ -40,7 +40,7 @@ document.querySelectorAll("nav").forEach((nav) => {
       "snow-removal-fund.html",
     ],
     "documents.html": ["documents.html"],
-    "gallery.html": ["gallery.html", "a-view-from-the-uplands.html"],
+    "gallery.html": ["gallery.html", "a-view-from-the-uplands.html", "picture-of-the-month.html"],
     "support.html": ["support.html"],
   };
   const primaryLinks = [
