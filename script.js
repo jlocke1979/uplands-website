@@ -45,6 +45,7 @@ document.querySelectorAll("nav").forEach((nav) => {
   const primaryLinks = [
     ["about.html", "About"],
     ["news-information.html", "News & Information"],
+    ["calendar.html", "Calendar"],
     ["community.html", "Community"],
     ["documents.html", "Documents"],
     ["gallery.html", "Gallery"],
@@ -78,4 +79,30 @@ document.querySelectorAll("nav").forEach((nav) => {
     button.setAttribute("aria-expanded", "false");
     button.setAttribute("aria-label", "Open navigation");
   });
+});
+
+// Paste the public Google Calendar ID between the quotation marks.
+// Find it in Google Calendar: Settings > Integrate calendar > Calendar ID.
+const publicCalendarId = "";
+
+document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
+  if (!publicCalendarId) return;
+
+  const calendarUrl = new URL("https://calendar.google.com/calendar/embed");
+  calendarUrl.searchParams.set("src", publicCalendarId);
+  calendarUrl.searchParams.set("ctz", "America/Chicago");
+  calendarUrl.searchParams.set("mode", "AGENDA");
+  calendarUrl.searchParams.set("showTitle", "0");
+  calendarUrl.searchParams.set("showPrint", "0");
+  calendarUrl.searchParams.set("showCalendars", "0");
+
+  const frame = document.createElement("iframe");
+  frame.className = "calendar-frame";
+  frame.src = calendarUrl.toString();
+  frame.title = "Uplands neighborhood events calendar";
+  frame.loading = "lazy";
+  frame.setAttribute("frameborder", "0");
+  frame.setAttribute("scrolling", "no");
+
+  shell.replaceChildren(frame);
 });

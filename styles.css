@@ -11,6 +11,72 @@
   --card: #ffffff;
 }
 
+/* Public neighborhood calendar */
+.calendar-page {
+  max-width: 1180px;
+}
+
+.calendar-shell {
+  min-height: 660px;
+  margin-top: 38px;
+  overflow: hidden;
+  border: 1px solid rgba(45, 70, 54, .16);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(39, 56, 43, .09);
+}
+
+.calendar-frame {
+  display: block;
+  width: 100%;
+  min-height: 660px;
+  border: 0;
+}
+
+.calendar-placeholder {
+  display: grid;
+  min-height: 660px;
+  padding: 48px 24px;
+  place-content: center;
+  text-align: center;
+}
+
+.calendar-placeholder h2 {
+  margin-bottom: 10px;
+}
+
+.calendar-placeholder p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.calendar-note {
+  margin-top: 28px;
+  padding: 28px 32px;
+  border-radius: 18px;
+  background: var(--cream, #f4f0e6);
+}
+
+.calendar-note h2 {
+  margin-top: 0;
+}
+
+.calendar-note p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .calendar-shell,
+  .calendar-frame,
+  .calendar-placeholder {
+    min-height: 620px;
+  }
+
+  .calendar-shell {
+    border-radius: 16px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
