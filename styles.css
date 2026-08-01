@@ -1035,13 +1035,43 @@ h1 {
 }
 
 .document-link {
-  display: inline-block;
+  --document-link-color: var(--green);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   padding: 12px 18px;
   border-radius: 999px;
   color: white;
-  background: var(--green);
+  background: var(--document-link-color);
   text-decoration: none;
   font-weight: 700;
+  box-shadow: 0 6px 16px rgba(28, 46, 35, .14);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.document-link span {
+  transition: transform .2s ease;
+}
+
+.document-link:hover,
+.document-link:focus-visible {
+  color: white;
+  filter: brightness(.92);
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px rgba(28, 46, 35, .2);
+}
+
+.document-link:hover span,
+.document-link:focus-visible span {
+  transform: translateX(3px);
+}
+
+.document-link--overview {
+  --document-link-color: #3f6570;
+}
+
+.document-link--history {
+  --document-link-color: #8a5a3c;
 }
 
 .view-page {
