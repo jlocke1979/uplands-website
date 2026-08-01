@@ -92,7 +92,7 @@ document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
   const calendarUrl = new URL("https://calendar.google.com/calendar/embed");
   calendarUrl.searchParams.set("src", publicCalendarId);
   calendarUrl.searchParams.set("ctz", "America/Chicago");
-  calendarUrl.searchParams.set("mode", "AGENDA");
+  calendarUrl.searchParams.set("mode", "MONTH");
   calendarUrl.searchParams.set("showTitle", "0");
   calendarUrl.searchParams.set("showPrint", "0");
   calendarUrl.searchParams.set("showCalendars", "0");
