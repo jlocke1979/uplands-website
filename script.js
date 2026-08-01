@@ -28,6 +28,7 @@ document.querySelectorAll("nav").forEach((nav) => {
   const activeGroups = {
     "about.html": ["about.html", "history.html", "association-overview.html"],
     "news-information.html": ["news-information.html", "neighbor-update.html", "garage-sale.html", "new-neighbor.html", "local-resources.html"],
+    "calendar.html": ["calendar.html"],
     "community.html": [
       "community.html",
       "block-parties.html",
