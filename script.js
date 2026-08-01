@@ -83,7 +83,7 @@ document.querySelectorAll("nav").forEach((nav) => {
 
 // Paste the public Google Calendar ID between the quotation marks.
 // Find it in Google Calendar: Settings > Integrate calendar > Calendar ID.
-const publicCalendarId = "";
+const publicCalendarId = "admin@theuplandspeoria.org";
 
 document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
   if (!publicCalendarId) return;
