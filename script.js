@@ -108,6 +108,43 @@ document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
   shell.replaceChildren(frame);
 });
 
+// Keep keyboard and assistive-technology navigation inside the active viewer.
+const photoDialogStack = [];
+const photoDialogInertState = new Map();
+const syncPhotoDialogs = () => {
+  const active = photoDialogStack.at(-1);
+  for (const child of document.body.children) {
+    if (!photoDialogInertState.has(child)) photoDialogInertState.set(child, child.inert);
+    child.inert = active ? child !== active : photoDialogInertState.get(child);
+  }
+  if (!active) photoDialogInertState.clear();
+};
+const activatePhotoDialog = (dialog) => {
+  photoDialogStack.push(dialog);
+  syncPhotoDialogs();
+};
+const deactivatePhotoDialog = (dialog) => {
+  const index = photoDialogStack.lastIndexOf(dialog);
+  if (index !== -1) photoDialogStack.splice(index, 1);
+  syncPhotoDialogs();
+};
+document.addEventListener("keydown", (event) => {
+  const dialog = photoDialogStack.at(-1);
+  if (!dialog || event.key !== "Tab") return;
+  const controls = [...dialog.querySelectorAll('button, a[href], [tabindex="0"]')]
+    .filter((element) => !element.disabled && element.getClientRects().length);
+  if (!controls.length) return;
+  const first = controls[0];
+  const last = controls.at(-1);
+  if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+    event.preventDefault();
+    first.focus();
+  }
+});
+
 // Gallery image lightbox with scroll/pinch zoom
 (() => {
   const minScale = 1;
@@ -142,6 +179,7 @@ document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
   let originX = 0;
   let originY = 0;
   let lastFocused = null;
+  let closeTimer = null;
 
   const clampScale = (value) => Math.min(maxScale, Math.max(minScale, value));
 
@@ -169,6 +207,7 @@ document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
   const openLightbox = (link) => {
     const img = link.querySelector("img");
     if (!img) return;
+    window.clearTimeout(closeTimer);
     lastFocused = document.activeElement;
     image.src = link.href;
     image.alt = img.alt || "";
@@ -178,13 +217,17 @@ document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
     lightbox.hidden = false;
     document.body.classList.add("lightbox-open");
     requestAnimationFrame(() => lightbox.classList.add("open"));
+    activatePhotoDialog(lightbox);
     closeButton.focus();
   };
 
   const closeLightbox = () => {
     lightbox.classList.remove("open");
     document.body.classList.remove("lightbox-open");
-    window.setTimeout(() => {
+    deactivatePhotoDialog(lightbox);
+    isDragging = false;
+    imageWrap.classList.remove("dragging");
+    closeTimer = window.setTimeout(() => {
       lightbox.hidden = true;
       image.src = "";
     }, 200);
@@ -280,6 +323,16 @@ document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
     }
   }, { passive: false });
 
+  // Rebase the remaining finger after a pinch so the image does not jump.
+  imageWrap.addEventListener("touchend", (event) => {
+    if (event.touches.length === 1) {
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+      touchOriginX = originX;
+      touchOriginY = originY;
+    }
+  });
+
   image.addEventListener("dblclick", () => {
     setScale(scale > minScale ? 1 : 2);
   });
@@ -355,17 +408,20 @@ document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
   const winnersGrid = modal.querySelector(".month-modal-grid");
 
   let lastFocused = null;
+  let closeTimer = null;
 
   const closeModal = () => {
     modal.classList.remove("open");
     document.body.classList.remove("month-modal-open");
-    window.setTimeout(() => {
+    deactivatePhotoDialog(modal);
+    closeTimer = window.setTimeout(() => {
       modal.hidden = true;
     }, 200);
     if (lastFocused) lastFocused.focus();
   };
 
   const openModal = (monthIndex) => {
+    window.clearTimeout(closeTimer);
     lastFocused = document.activeElement;
     title.textContent = `${MONTHS[monthIndex]} winners`;
     winnersGrid.replaceChildren(...YEARS.map((year, yearIndex) => {
@@ -387,6 +443,7 @@ document.querySelectorAll("[data-calendar-shell]").forEach((shell) => {
     modal.hidden = false;
     document.body.classList.add("month-modal-open");
     requestAnimationFrame(() => modal.classList.add("open"));
+    activatePhotoDialog(modal);
     closeButton.focus();
   };
 
