@@ -211,7 +211,8 @@ document.addEventListener("keydown", (event) => {
     lastFocused = document.activeElement;
     image.src = link.href;
     image.alt = img.alt || "";
-    caption.textContent = img.alt || "";
+    const credit = link.querySelector(".gallery-photo-credit")?.textContent.trim();
+    caption.textContent = [img.alt, credit].filter(Boolean).join(" — ");
     fullsizeLink.href = link.href;
     resetZoom();
     lightbox.hidden = false;
