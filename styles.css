@@ -4530,3 +4530,12 @@ footer {
     columns: 1;
   }
 }
+
+/* Individual gallery photograph attribution. */
+.gallery-photo-credit {
+  display: block;
+  padding: 10px 14px;
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.4;
+}
