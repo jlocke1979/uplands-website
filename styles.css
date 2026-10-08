@@ -3808,8 +3808,9 @@ h1 {
 
 .lightbox-close {
   position: absolute;
-  top: -44px;
-  right: 0;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
   width: 36px;
   height: 36px;
   border: none;
