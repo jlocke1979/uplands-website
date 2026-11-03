@@ -260,6 +260,18 @@ nav {
   line-height: 1.6;
 }
 
+.info-current-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+  margin-top: 18px;
+}
+
+.info-current-actions a:not(.button) {
+  font-weight: 700;
+}
+
 .info-current-side {
   display: grid;
   gap: 18px;
