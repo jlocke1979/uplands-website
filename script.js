@@ -38,6 +38,7 @@ document.querySelectorAll("nav").forEach((nav) => {
       "halloween.html",
       "picnic.html",
       "snow-removal-fund.html",
+      "snow-fund-handout.html",
     ],
     "documents.html": ["documents.html"],
     "gallery.html": ["gallery.html", "a-view-from-the-uplands.html", "picture-of-the-month.html", "photo-submissions.html"],
