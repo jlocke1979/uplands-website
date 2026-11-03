@@ -4607,3 +4607,255 @@ footer {
   font-size: .85rem;
   line-height: 1.4;
 }
+
+/* Snow Fund handout. Amounts sit in .handout-figures and wrap if they change. */
+.handout-body {
+  background: var(--cream);
+}
+
+.handout-toolbar,
+.handout-editor-note {
+  max-width: 760px;
+  margin: 22px auto 0;
+  padding: 0 22px;
+}
+
+.handout-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.handout-toolbar a,
+.handout-actions a:not(.button),
+.handout-other-links a {
+  font-weight: 700;
+}
+
+.handout-editor-note {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.handout-sheet {
+  max-width: 760px;
+  margin: 18px auto 48px;
+  padding: 42px 48px 36px;
+  background: white;
+  color: var(--ink);
+  border: 1px solid rgba(35, 66, 54, .12);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(21, 47, 39, .08);
+}
+
+.handout-brand,
+.handout-place,
+.handout-kicker {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.handout-brand {
+  color: var(--green-dark);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.handout-place {
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.handout-kicker {
+  margin-top: 22px;
+  color: #2f668d;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.handout-sheet h1 {
+  margin: 8px 0 0;
+  color: var(--green-dark);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.handout-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.handout-figure {
+  min-width: 0;
+  padding: 16px 18px 18px;
+  border: 1px solid rgba(35, 66, 54, .14);
+  border-radius: 14px;
+  background: #f4f8fb;
+}
+
+.handout-figure:first-child {
+  background: #f3f7f4;
+}
+
+.handout-figure p,
+.handout-figure strong,
+.handout-figure span {
+  overflow-wrap: break-word;
+}
+
+.handout-figure p {
+  margin: 0 0 8px;
+  color: #2f668d;
+  font: 700 .72rem/1.2 Arial, Helvetica, sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.handout-figure strong {
+  display: block;
+  color: var(--green-dark);
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.handout-figure span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.handout-renewal,
+.handout-give,
+.handout-other,
+.handout-why {
+  margin-top: 22px;
+}
+
+.handout-renewal,
+.handout-give li,
+.handout-other p,
+.handout-why li {
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.handout-sheet h2 {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: 1.25rem;
+}
+
+.handout-give ol,
+.handout-why ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.handout-give li + li,
+.handout-why li + li {
+  margin-top: 10px;
+}
+
+.handout-give a,
+.handout-close p:last-child {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.handout-give a {
+  display: block;
+  margin-top: 2px;
+}
+
+.handout-actions,
+.handout-other-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.handout-actions {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.handout-other-links {
+  margin-bottom: 0;
+}
+
+.handout-sheet footer.handout-close {
+  margin-top: 26px;
+  padding: 14px 0 0;
+  text-align: left;
+  color: var(--muted);
+  background: transparent;
+  border-top: 1px solid rgba(35, 66, 54, .14);
+  font-size: .85rem;
+  letter-spacing: 0;
+}
+
+.handout-close p {
+  margin: 0;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85rem;
+}
+
+.handout-close p + p {
+  margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .handout-sheet {
+    margin: 16px 16px 36px;
+    padding: 28px 20px 24px;
+  }
+
+  .handout-figures {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.55in;
+  }
+
+  body.handout-body {
+    background: white !important;
+  }
+
+  body.handout-body .page-header,
+  body.handout-body > footer,
+  body.handout-body .handout-screen-only {
+    display: none !important;
+  }
+
+  body.handout-body .handout-sheet {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  body.handout-body .handout-figures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.handout-body a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
