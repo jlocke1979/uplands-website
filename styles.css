@@ -925,6 +925,11 @@ h1 {
   border-color: rgba(184, 76, 50, .16);
 }
 
+.current-item--snow {
+  background: #eef6fb;
+  border-color: rgba(47, 102, 141, .18);
+}
+
 .current-item--garden {
   background: #f0f5e9;
   border-color: rgba(85, 127, 69, .18);
@@ -996,6 +1001,14 @@ h1 {
 
 .current-item--picnic .button--dark {
   background: #a95238;
+}
+
+.current-item--snow .status-label {
+  color: #2f668d;
+}
+
+.current-item--snow .button--dark {
+  background: #2f668d;
 }
 
 .current-item--garden .status-label {
@@ -1847,6 +1860,56 @@ h1 {
   margin-top: 16px;
   color: var(--muted);
   font-size: .86rem;
+  line-height: 1.55;
+}
+
+.campaign-payment-note a,
+.snow-subscribe a {
+  font-weight: 700;
+}
+
+.snow-subscribe {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8px 28px 36px;
+  text-align: center;
+}
+
+.snow-subscribe h2 {
+  margin: 10px 0 14px;
+  color: var(--green-dark);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -.03em;
+  line-height: 1.05;
+}
+
+.snow-subscribe p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.snow-subscribe .paypal-subscribe {
+  width: min(360px, 100%);
+  max-width: 360px;
+  min-height: 148px;
+  margin: 22px auto 8px;
+}
+
+.snow-subscribe-secondary {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+#general-fund,
+#snow-removal,
+#beautification,
+#one-time,
+#snow-subscription {
+  scroll-margin-top: 24px;
 }
 
 .snow-campaign-art {
@@ -1875,11 +1938,12 @@ h1 {
 
 .css-snowman {
   position: absolute;
-  left: 16%;
+  left: 50%;
   bottom: 54px;
   width: 225px;
   height: 350px;
   z-index: 2;
+  transform: translateX(-50%);
 }
 
 .snowman-head,
@@ -2180,6 +2244,10 @@ h1 {
 
 .campaign-closing .button {
   margin-top: 28px;
+}
+
+.campaign-closing .campaign-actions {
+  justify-content: center;
 }
 
 .campaign-body--picnic {
@@ -4400,9 +4468,9 @@ footer {
   }
 
   .css-snowman {
-    left: 4%;
-    transform: scale(.86);
-    transform-origin: bottom left;
+    left: 50%;
+    transform: translateX(-50%) scale(.86);
+    transform-origin: bottom center;
   }
 
   .campaign-thermometer {
