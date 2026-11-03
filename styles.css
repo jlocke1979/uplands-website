@@ -4820,6 +4820,78 @@ footer {
   margin-top: 4px;
 }
 
+.handout-intro {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.handout-intro-copy {
+  min-width: 0;
+}
+
+.handout-intro .handout-kicker {
+  margin-top: 0;
+}
+
+.handout-snow-art {
+  position: relative;
+  flex: 0 0 148px;
+  width: 148px;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255,255,255,.95) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 28%, rgba(255,255,255,.8) 0 3px, transparent 4px),
+    linear-gradient(160deg, #dceefa 0%, #8fc1dc 100%);
+}
+
+.handout-snow-art::after {
+  content: "";
+  position: absolute;
+  left: -12%;
+  right: -12%;
+  bottom: -18%;
+  height: 42%;
+  border-radius: 50% 50% 0 0;
+  background: #f8fbfd;
+}
+
+.handout-snow-art .css-snowman {
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%) scale(.4);
+  transform-origin: bottom center;
+}
+
+.handout-place {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .95rem;
+}
+
+.handout-scan {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.handout-scan img {
+  display: block;
+  width: 148px;
+  height: 148px;
+}
+
+.handout-scan p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
 @media (max-width: 640px) {
   .handout-sheet {
     margin: 16px 16px 36px;
@@ -4828,6 +4900,13 @@ footer {
 
   .handout-figures {
     grid-template-columns: 1fr;
+  }
+
+  .handout-intro,
+  .handout-scan {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -4858,6 +4937,17 @@ footer {
 
   body.handout-body .handout-figures {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.handout-body .handout-intro,
+  body.handout-body .handout-scan {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  body.handout-body .handout-intro {
+    align-items: flex-end;
   }
 
   body.handout-body a {
