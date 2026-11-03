@@ -4613,8 +4613,7 @@ footer {
   background: var(--cream);
 }
 
-.handout-toolbar,
-.handout-editor-note {
+.handout-toolbar {
   max-width: 760px;
   margin: 22px auto 0;
   padding: 0 22px;
@@ -4631,11 +4630,6 @@ footer {
 .handout-actions a:not(.button),
 .handout-other-links a {
   font-weight: 700;
-}
-
-.handout-editor-note {
-  color: var(--muted);
-  line-height: 1.5;
 }
 
 .handout-sheet {
