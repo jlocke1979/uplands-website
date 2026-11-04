@@ -4866,9 +4866,53 @@ footer {
 }
 
 .snow-campaign-art .css-snowman {
-  left: 16%;
+  left: 50%;
   bottom: 54px;
-  transform: none;
+  transform: translateX(-50%);
+}
+
+.campaign-fund {
+  max-width: 1080px;
+  margin: 8px auto 10px;
+  padding: 0 28px;
+}
+
+.campaign-fund-invite {
+  margin: 0 0 14px;
+  color: var(--green-dark);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.campaign-fund-bar {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e4ebef;
+}
+
+.campaign-fund-bar span {
+  display: block;
+  width: var(--fund-level, 0%);
+  height: 100%;
+  background: #2f668d;
+}
+
+.campaign-fund .campaign-status {
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.campaign-fund-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+.snow-subscribe .recurring-option-amount {
+  color: var(--green);
+  font-weight: 800;
 }
 
 .handout-progress {
@@ -4918,6 +4962,14 @@ footer {
   color: var(--muted);
   font-family: Arial, Helvetica, sans-serif;
   font-size: .95rem;
+}
+
+.handout-plow {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .95rem;
+  line-height: 1.45;
 }
 
 .handout-scan {
@@ -5006,9 +5058,9 @@ footer {
 
 @media (max-width: 760px) {
   .snow-campaign-art .css-snowman {
-    left: 4%;
+    left: 50%;
     bottom: 36px;
-    transform: scale(.78);
-    transform-origin: bottom left;
+    transform: translateX(-50%) scale(.78);
+    transform-origin: bottom center;
   }
 }
