@@ -2177,7 +2177,7 @@ h1 {
 
 .thermometer-callout {
   position: absolute;
-  top: 158px;
+  top: 118px;
   right: 78px;
   margin: 0;
   padding: 7px 10px;
@@ -4941,45 +4941,9 @@ footer {
 }
 
 .snow-campaign-art .css-snowman {
-  left: 50%;
+  left: 30%;
   bottom: 54px;
   transform: translateX(-50%);
-}
-
-.snow-campaign-art .css-snowman--shocked {
-  left: 22%;
-}
-
-.snow-campaign-art .css-snowman--shocked .snowman-brow,
-.snow-campaign-art .css-snowman--shocked .snowman-mouth {
-  position: absolute;
-  background: var(--ink);
-}
-
-.snow-campaign-art .css-snowman--shocked .snowman-brow {
-  top: 22px;
-  width: 16px;
-  height: 3px;
-  border-radius: 999px;
-}
-
-.snow-campaign-art .css-snowman--shocked .snowman-brow--left {
-  left: 16px;
-  transform: rotate(22deg);
-}
-
-.snow-campaign-art .css-snowman--shocked .snowman-brow--right {
-  right: 16px;
-  transform: rotate(-22deg);
-}
-
-.snow-campaign-art .css-snowman--shocked .snowman-mouth {
-  top: 62px;
-  left: 39px;
-  width: 14px;
-  height: 16px;
-  border-radius: 50%;
-  background: #2b241f;
 }
 
 .campaign-fund {
@@ -5175,14 +5139,7 @@ footer {
 
 @media (max-width: 760px) {
   .snow-campaign-art .css-snowman {
-    left: 50%;
-    bottom: 36px;
-    transform: translateX(-50%) scale(.78);
-    transform-origin: bottom center;
-  }
-
-  .snow-campaign-art .css-snowman--shocked {
-    left: 30%;
+    left: 32%;
     bottom: 28px;
     transform: translateX(-50%) scale(.68);
     transform-origin: bottom center;
