@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Snow Removal Fund · The Uplands</title>
-  <meta name="description" content="The Uplands Snow Fund goal is $6,000. $3,000 is in existing funds and $1,000 was raised this year, $4,000 total. A suggested $30 yearly gift is not that budget." />
-  <link rel="stylesheet" href="styles.css?v=20261123-4" />
+  <meta name="description" content="The Uplands Snow Fund goal is $6,000. $4,000 is in hand: $3,000 in existing funds and $1,000 raised this year. A suggested $30 yearly gift is not that budget." />
+  <link rel="stylesheet" href="styles.css?v=20261123-5" />
 </head>
 <body class="campaign-body campaign-body--snow">
   <header class="page-header">
@@ -37,7 +37,8 @@
         <h1>Keep the walks clear.<br><em>Keep the Uplands moving.</em></h1>
         <p class="campaign-lede">
           The Snow Removal Fund is open for this winter. The goal is
-          $6,000 in the fund, and $4,000 is in hand. A suggested $30-a-year household subscription is the simplest
+          $6,000, and $4,000 is in hand: $3,000 in existing funds and $1,000 raised this year.
+          A suggested $30-a-year household subscription is the simplest
           way to help. That gift is not the seasonal budget.
         </p>
         <div class="campaign-actions">
@@ -53,25 +54,39 @@
         </p>
       </div>
 
-      <div class="snow-campaign-art" aria-label="Snowman beside a thermometer. The bulb is $3,000 in existing funds, the top is the $6,000 goal, and the red fill stops at $4,000.">
+      <div class="snow-campaign-art" aria-label="Snowman with a small open mouth">
         <div class="snowfall" aria-hidden="true"></div>
         <div class="css-snowman" aria-hidden="true">
           <span class="snowman-hat"></span>
-          <span class="snowman-head"><i></i></span>
+          <span class="snowman-head"><i></i><b class="snowman-mouth"></b></span>
           <span class="snowman-middle"></span>
           <span class="snowman-base"></span>
           <span class="snowman-arm snowman-arm--left"></span>
           <span class="snowman-arm snowman-arm--right"></span>
         </div>
-        <div class="campaign-thermometer campaign-thermometer--scale" style="--fund-level: 33.3%;" aria-label="Vertical scale from $3,000 at the bulb to $6,000 at the top. Red fill stops at $4,000. $1,000 raised so far this year.">
-          <div class="campaign-thermometer-label">$6K</div>
-          <div class="campaign-thermometer-tube"><span></span></div>
-          <div class="thermometer-mark">$4K</div>
-          <p class="thermometer-callout">$1K raised so far this year!</p>
-          <div class="campaign-thermometer-bulb"><span>$3K</span></div>
-        </div>
       </div>
     </section>
+
+    <article class="handout-sheet snow-page-handout">
+      <section class="handout-figures" aria-label="Seasonal goal and suggested gift">
+        <div class="handout-figure">
+          <p>Goal in the fund</p>
+          <strong>$6,000</strong>
+        </div>
+        <div class="handout-figure">
+          <p>Suggested household gift</p>
+          <strong>$30 a year</strong>
+          <span>Not the budget. Renews yearly.</span>
+        </div>
+      </section>
+      <p class="handout-plow"><a href="https://wilsonservicesil.com">Wilson Services</a> (wilsonservicesil.com) comes out for 2 or more inches and tries to plow after the city clears the streets. That timing is not always possible.</p>
+      <section class="handout-scan">
+        <a href="snow-removal-fund.html">
+          <img src="assets/images/uplands-snow-fund-qr.png" alt="QR code for the Snow Removal Fund page" width="360" height="360">
+        </a>
+        <p>Scan to give. Yearly gift or a one-time amount.</p>
+      </section>
+    </article>
 
     <section class="snow-subscribe" id="snow-subscription">
       <p class="campaign-kicker">Suggested annual gift</p>
@@ -84,7 +99,10 @@
         payment information.
       </p>
       <p class="recurring-option-amount">Yearly recurring gift · $30</p>
-      <div id="paypal-button-container-P-4B9811964V1773057NI2VPRY" class="paypal-subscribe"></div>
+      <div class="snow-give-actions">
+        <div id="paypal-button-container-P-4B9811964V1773057NI2VPRY" class="paypal-subscribe"></div>
+        <a class="snow-onetime-button" href="https://www.paypal.com/ncp/payment/9TEZ8K49JL5ZU" target="_blank" rel="noopener noreferrer">One-time gift</a>
+      </div>
       <p class="snow-subscribe-secondary">
         <a href="support.html#one-time">One-time gift</a>
         <span aria-hidden="true">·</span>
@@ -94,20 +112,20 @@
       </p>
     </section>
 
-    <section class="campaign-fund" aria-label="Snow fund progress: $3,000 in existing funds, $1,000 raised this year, $4,000 total toward a $6,000 goal">
-      <p class="campaign-fund-invite">Help close the $2,000 gap and support neighborhood snow clearing.</p>
-      <div class="campaign-status campaign-status--plain">
-        <div>
-          <strong>$3K in existing funds</strong>
+    <section class="campaign-fund" aria-label="$4,000 of the $6,000 goal. $3,000 in existing funds and $1,000 raised this year.">
+      <div class="snow-fund-scale">
+        <p class="snow-fund-scale-kicker">In hand</p>
+        <p class="snow-fund-scale-total">$4,000 <span>of $6,000</span></p>
+        <p class="snow-fund-scale-split">$3K existing funds and $1K raised this year</p>
+        <div class="handout-thermometer" style="--fund-level: 66.7%;" role="img" aria-label="Red fill reaches about two-thirds of the scale, at $4,000 of the $6,000 goal.">
+          <span></span>
         </div>
-        <div>
-          <strong>$1K raised this year</strong>
-        </div>
-        <div>
-          <strong>$6K goal</strong>
-        </div>
+        <ol class="fund-scale-ticks">
+          <li style="--tick: 50%;">$3K</li>
+          <li style="--tick: 66.7%;">$4K</li>
+          <li style="--tick: 100%;">$6K</li>
+        </ol>
       </div>
-      <p class="campaign-fund-note">$4,000 total toward the $6,000 goal.</p>
     </section>
 
     <section class="campaign-details" id="how-it-helps">
@@ -135,7 +153,7 @@
     </section>
 
     <aside class="campaign-verification">
-      $4,000 is toward the $6,000 goal: $3,000 in existing funds and $1,000 raised this year.
+      $4,000 is toward the $6,000 goal: $3,000 in existing funds and $1,000 raised this year. These figures are not a live balance.
     </aside>
 
     <section class="campaign-closing">
